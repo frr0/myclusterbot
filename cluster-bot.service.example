@@ -1,0 +1,19 @@
+[Unit]
+Description=K3s Cluster Telegram Admin Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/Progetti/cluster-bot
+Environment="PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="HOME=%h"
+Environment="PYTHONUNBUFFERED=1"
+ExecStart=/usr/bin/python3 %h/Progetti/cluster-bot/bot.py
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

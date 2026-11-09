@@ -1,0 +1,18 @@
+# Secrets and configuration
+config.json
+*.env
+*.key
+*.token
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Logs & temp files
+*.log
+/tmp/cluster-bot.lock
+.DS_Store
